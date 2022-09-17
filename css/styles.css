@@ -1,5 +1,11 @@
 :root {
-
+  --font-primary: 'Lexend Deca', sans-serif;
+  --font-secondary: 'Big Shoulders Display', cursive;
+  --color-primary: hsl(0, 0%, 94.9%);
+  --color-secondary: hsla(0, 0%, 100%, 0.75);
+  --color-sedans: hsl(30.8, 76.5%, 51.6%);
+  --color-suvs: hsl(184.2, 100%, 22.2%);
+  --color-luxury: hsl(179.1, 100%, 12.7%);
 }
 
 * {
@@ -8,10 +14,16 @@
   padding: 0;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   border: none;
   box-shadow: none;
   outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:link,
@@ -21,8 +33,18 @@ a:active {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-primary);
+}
+
+h2 {
+  font-family: var(--font-secondary);
 }
 
 .wrapper {
@@ -30,4 +52,76 @@ ul, ol {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 20.4375rem;
+  grid-template-rows: repeat(3, 27.625rem);
+  border-radius: 8px;
+}
+
+.card>section {
+  padding: 48px;
+}
+
+.sedans {
+  border-radius: 8px 8px 0 0;
+  background-color: var(--color-sedans);
+}
+
+.suvs {
+  background-color: var(--color-suvs);
+}
+
+.luxury {
+  border-radius: 0 0 8px 8px;
+  background-color: var(--color-luxury);
+}
+
+.card>section>h2 {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.card>section>p {
+  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--color-secondary);
+}
+
+.card>section>a {
+  font-size: 15px;
+  line-height: 25px;
+  padding: 11.5px 29px;
+  border: 3px solid transparent;
+  border-radius: 25px;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.card section.sedans a {
+  color: var(--color-sedans);
+}
+
+.card section.suvs a {
+  color: var(--color-suvs);
+}
+
+.card section.luxury a {
+  color: var(--color-luxury);
+}
+
+.card>section>a:hover {
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 3px solid var(--color-primary);
+  transition-property: color, background-color, border;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
