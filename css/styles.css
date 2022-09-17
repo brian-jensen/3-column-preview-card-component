@@ -89,7 +89,7 @@ h2 {
 }
 
 .card>section>p {
-  margin-bottom: 40px;
+  margin-bottom: 95px;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   color: var(--color-secondary);
@@ -128,8 +128,8 @@ h2 {
 
 @media (min-width: 1440px) {
   .card {
-    grid-template-columns: repeat(3, 20.4375rem);
-    grid-template-rows: 27.625rem;
+    grid-template-columns: repeat(3, 19.1875rem);
+    grid-template-rows: 31.25rem;
   }
 
   .sedans {
